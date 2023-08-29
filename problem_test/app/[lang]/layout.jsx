@@ -7,6 +7,7 @@ import ReduxProvider from "../../redux/provider";
 import AuthProvider from "./dashboardComponents/AuthProvider/AuthProvider";
 import "../globals.scss";
 import CookiesBanner from "./components/Cookies/Cookies";
+import Link from "next/link";
 
 const inter = Inter({
     weight: ["300", "400", "500", "600", "700"],
@@ -37,7 +38,12 @@ export default async function RootLayout({ children, params }) {
             <body className={inter.className}>
                 <AuthProvider>
                     <ReduxProvider>
-                        <Header dictionary={dictionary} />
+                        {/* <Header dictionary={dictionary} /> */}
+                        <div>
+                            <Link href="/">HOME</Link>
+                            <Link href="/charity">Charity</Link>
+                            <Link href="/catalog">catalog</Link>
+                        </div>
                         <main style={{ flex: 1 }}>{children}</main>
                         <Footer dictionary={dictionary} />
                         <CookiesBanner />
