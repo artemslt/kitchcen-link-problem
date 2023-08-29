@@ -40,9 +40,9 @@ export default async function RootLayout({ children, params }) {
                 <ReduxProvider>
                     {/* <Header dictionary={dictionary} /> */}
                     <div>
-                        <Link href="/">HOME</Link>
-                        <Link href="/charity">Charity</Link>
-                        <Link href="/catalog">catalog</Link>
+                        <a href="/">HOME</a>
+                        <a href="/charity">Charity</a>
+                        <a href="/catalog">catalog</a>
                     </div>
                     <main style={{ flex: 1 }}>{children}</main>
                     {/* <Footer dictionary={dictionary} />
